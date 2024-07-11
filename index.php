@@ -2,11 +2,11 @@
 
 require 'vendor/autoload.php';
 
-use App\NewsScraper;
-use App\SEOScraper;
+use App\NewsCrawler;
+use App\SEOCrawler;
 
-$newsScraper = new NewsScraper();
-$seoScraper = new SEOScraper();
+$newsCrawler = new NewsCrawler();
+$seoCrawler = new SEOCrawler();
 
 $urlSelectors = [
     'https://symfony.com/blog/' => [],
@@ -17,14 +17,14 @@ $urlSelectors = [
     ],
 ];
 
-$allNews = $newsScraper->getNews($urlSelectors);
+$allNews = $newsCrawler->getNews($urlSelectors);
 
 $urlKeywords = [
     'https://symfony.com/blog/' => ['Symfony', 'PHP', 'Framework'],
     'https://blog.angular.dev/' => ['Angular', 'TypeScript', 'JavaScript'],
 ];
 
-$seoData = $seoScraper->getSEOData($urlKeywords);
+$seoData = $seoCrawler->getSEOData($urlKeywords);
 ?>
 
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ $seoData = $seoScraper->getSEOData($urlKeywords);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scraping Results</title>
+    <title>Crawling Results</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -62,7 +62,7 @@ $seoData = $seoScraper->getSEOData($urlKeywords);
 </head>
 <body>
 
-<h2>Scraping Results</h2>
+<h2>Crawling Results</h2>
 
 <?php foreach ($urlSelectors as $url => $selectors): ?>
     <h3>News from <?php echo $url; ?></h3>

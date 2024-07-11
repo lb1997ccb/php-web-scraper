@@ -9,10 +9,10 @@ use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
-class SEOScraper
+class SEOCrawler
 {
     /**
-     * Scrapes SEO data for multiple URLs based on given keywords
+     * Crawls SEO data for multiple URLs based on given keywords
      *
      * @param array $urlKeywords array where keys are URLs and values are arrays of keywords
      * @return array

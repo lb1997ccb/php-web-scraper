@@ -9,7 +9,7 @@ use Symfony\Contracts\HttpClient\Exception\RedirectionExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\ServerExceptionInterface;
 use Symfony\Contracts\HttpClient\Exception\TransportExceptionInterface;
 
-class NewsScraper
+class NewsCrawler
 {
     /**
      * Retrieves news articles from multiple URLs based on provided CSS selectors
