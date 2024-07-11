@@ -1,0 +1,35 @@
+# Ignore vendor directory
+/vendor/
+
+# generated logs
+/log/
+
+# environment-specific files
+.env
+
+# IDE and editor specific files
+.idea/
+.vscode/
+
+# Ignore Composer lock file
+composer.lock
+
+# private information
+config.php
+
+# build artifacts
+/build/
+
+# session files
+/sessions/
+
+# SQLite database file
+*.sqlite
+
+# macOS specific files
+.DS_Store
+
+# backup files
+*~
+
+.tmp/
