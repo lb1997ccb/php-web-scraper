@@ -9,11 +9,7 @@ $newsScraper = new NewsScraper();
 $seoScraper = new SEOScraper();
 
 $urlSelectors = [
-    'https://symfony.com/blog/' => [
-        'postSelector' => '.blog-post',
-        'titleSelector' => 'h2 a',
-        'pathSelector' => 'h2 a',
-    ],
+    'https://symfony.com/blog/' => [],
     'https://blog.angular.dev/' => [
         'postSelector' => '.js-trackPostPresentation',
         'titleSelector' => 'a h3 div',
